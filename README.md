@@ -17,7 +17,7 @@ For example,
 {editor: atom$TextEditor, position: {column: number, row: number}}
 ```
 
-is pretty printed as
+is pretty printed with maxColumnWidth of 40 characters as
 
 ```js
 {
@@ -40,7 +40,7 @@ npm install pretty-best-effort
 
 ```js
 import prettyBestEffort from 'pretty-best-effort';
-console.log(prettyBestEffort('{editor: atom$TextEditor, position: {column: number, row: number}}'));
+console.log(prettyBestEffort('{editor: atom$TextEditor, position: {column: number, row: number}}', 40));
 // Output:
 // `{
 //   editor: atom$TextEditor,
