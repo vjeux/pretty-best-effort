@@ -3,7 +3,13 @@ This is a pretty printer that doesn't understand the actual syntax of the langua
 
 ## How does it work
 
-The idea is that it's going to try and pretty-print all the groups inline, but if the rendered version is more than 40 characters, then write each element on its own line and indent it.
+The idea is that it's going to try and pretty-print all the groups inline, but if the rendered version is more than 40 characters, then write each element on its own line and indent it. Groups and separators are defined by these characters:
+
+```js
+const openGroup = '[{(<';
+const closeGroup = ']})>';
+const separator = ',;';
+```
 
 For example,
 
